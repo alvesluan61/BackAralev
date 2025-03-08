@@ -21,13 +21,11 @@ class Endereco {
         console.log(`Complemento: ${this.complemento}`);
     }
 
-    // Método para cadastrar um endereço (simulação de persistência)
     static cadastrarEndereco(listaEnderecos, endereco) {
         listaEnderecos.push(endereco);
         console.log('Endereço cadastrado com sucesso!');
     }
 
-    // Método para atualizar um endereço
     static atualizarEndereco(listaEnderecos, CEP, novosDados) {
         const endereco = listaEnderecos.find(end => end.CEP === CEP);
         if (endereco) {
@@ -38,7 +36,6 @@ class Endereco {
         }
     }
 
-    // Método para excluir um endereço
     static excluirEndereco(listaEnderecos, CEP) {
         const index = listaEnderecos.findIndex(end => end.CEP === CEP);
         if (index !== -1) {

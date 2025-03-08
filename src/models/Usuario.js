@@ -7,7 +7,6 @@ class Usuario {
         this.nivelAcesso = nivelAcesso;
     }
 
-    // Função para validar se já existe um usuário com o mesmo login
     static validarLoginExistente(login, listaUsuarios) {
         const loginExistente = listaUsuarios.some(usuario => usuario.login === login);
         if (loginExistente) {
@@ -16,13 +15,10 @@ class Usuario {
         return loginExistente;
     }
 
-    // Função para exibir um alerta (simulação de alerta para o visitante)
     static exibirAlerta(mensagem) {
-        console.warn('ALERTA:', mensagem); // Exibe um alerta no console
-        // Em um ambiente real, você pode usar `alert()` no frontend ou uma biblioteca de notificações.
+        console.warn('ALERTA:', mensagem); 
     }
 
-    // Função para autenticar o usuário
     autenticarUsuario(login, senha) {
         if (this.login === login && this.senha === senha) {
             console.log('Usuário autenticado com sucesso!');
@@ -33,7 +29,6 @@ class Usuario {
         }
     }
 
-    // Função para definir permissões com base no nível de acesso
     definirPermissoes() {
         switch (this.nivelAcesso) {
             case 'admin':
