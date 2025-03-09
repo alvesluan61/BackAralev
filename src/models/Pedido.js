@@ -1,6 +1,6 @@
 class Pedido {
     constructor(cliente, dataPedido, status, listaItens) {
-        this.cliente = cliente; // Campo cliente (string)
+        this.cliente = cliente; 
         this.dataPedido = dataPedido; 
         this.status = status; 
         this.listaItens = listaItens; 

@@ -9,6 +9,7 @@ class Modulo {
         console.log(`Módulo "${this.nome}" (ID: ${this.idModulo}) inicializado.`);
         console.log(`Descrição: ${this.descricao}`);
     }
+    
     encerrarModulo() {
         console.log(`Módulo "${this.nome}" (ID: ${this.idModulo}) encerrado.`);
     }

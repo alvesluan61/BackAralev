@@ -9,7 +9,6 @@ class Endereco {
         this.complemento = complemento;
     }
 
-    // Método para exibir o endereço
     exibirEndereco() {
         console.log('--- Endereço ---');
         console.log(`CEP: ${this.CEP}`);

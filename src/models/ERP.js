@@ -31,7 +31,7 @@ class ERP {
         const modulo = this.modulos.find(modulo => modulo.idModulo === idModulo);
         if (modulo) {
             console.log(`Acessando módulo "${modulo.nome}" (ID: ${modulo.idModulo}) do ERP "${this.nome}".`);
-            modulo.inicializarModulo(); // Exemplo de uso do módulo
+            modulo.inicializarModulo(); 
         } else {
             console.log(`Erro: Módulo com ID ${idModulo} não encontrado.`);
         }
