@@ -1,3 +1,5 @@
+const connection = require('../../database');
+
 class Usuario {
     constructor(idUsuario, nome, login, senha, nivelAcesso) {
         this.idUsuario = idUsuario;
@@ -16,7 +18,17 @@ class Usuario {
     }
 
     static exibirAlerta(mensagem) {
-        console.warn('ALERTA:', mensagem); 
+        console.warn('ALERTA:', mensagem);
+    }
+
+    criarUsuario(nome, login, senha, nivelAcesso) {
+        const query = 'INSERT INTO tb_usuario (nome, login, senha, nivel_acesso) VALUES (?, ?, ?, ?)';
+        connection.query(query, [nome, login, senha, nivelAcesso], (err, results) => {
+            if (err) {
+                console.error('Erro ao criar usuário:', err);
+            }
+            console.log('Id do usuário criado:', results.insertId);
+        });
     }
 
     autenticarUsuario(login, senha) {
